@@ -17,15 +17,13 @@ function App() {
   };
 
   return (
-    <div>
-      <CartProvider>
-        {cartIshown && <Cart onClose={hideCartHandler} />}
-        <Header onShowCart={showCartHandler} />
-        <main>
-          <Meals />
-        </main>
-      </CartProvider>
-    </div>
+    <CartProvider>
+      {cartIshown && <Cart onClose={hideCartHandler} />}
+      <Header onShowCart={showCartHandler} />
+      <main>
+        <Meals />
+      </main>
+    </CartProvider>
   );
 }
 
